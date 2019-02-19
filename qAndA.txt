@@ -1,0 +1,120 @@
+Question for the learning objective "understand what the Document Object Model is"
+
+  The ______________ is an interface to web pages.  It defines the structure of the documents, the way it is styled and the ways it will/can be manipulated.
+
+  dom/DOM/Document Object Model/document object model
+  https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction
+
+
+Question for the learning objective "understanding The Document Object Model Tree and Nodes"
+
+The DOM, often reffered to as the DOM tree, consists of a tree of objects called _____________. These can consist of text, comments, or elements
+
+  Nodes
+  https://www.digitalocean.com/community/tutorials/understanding-the-dom-tree-and-nodes
+
+
+Question for the learning objective "understand how To Access Elements in The Document Object Model (DOM)"
+
+Which node is the most common to use in order to access content in the DOM?
+
+	! - HTML
+		Usually, when we access content in the DOM, it will be through an HTML element node.
+		https://eloquentjavascript.net/14_dom.html As you can see in the diagrams, everything that needs to be accessed needs to accessed through the HTML node.
+	BOM
+		The BOM(browser object model) is similar to the DOM, but includes all of the objects exposed by the browser(the address and favorites bar for example) as well as the DOM.
+		https://en.wikipedia.org/wiki/Browser_Object_Model
+	CSS
+		The CSS is accessed in the CCSOM which is only loaded and accessed through the DOM.
+    https://developers.google.com/web/fundamentals/performance/critical-rendering-path/constructing-the-object-model
+	Body
+		The body node is a child node of the HTML node which can only be accessed through the HTML node. This makes the HTML node more common.
+		https://www.w3schools.com/js/js_htmldom_navigation.asp (see diagram)
+
+
+Question for the learning objective "understand how To Traverse The Document Object Model (DOM)"
+
+	In the following code, which line would be affected by ul.firstElementChild.style.background = 'yellow'; when entered into the console?
+
+	<!DOCTYPE html>
+    <html>
+
+      <head>
+        <title>Learning About Nodes</title>
+      </head>
+
+      <body>
+        <h1>Shark World</h1>
+        <p>The world's leading source on <strong>shark</strong> related information.</p>
+        <h2>Types of Sharks</h2>
+        <ul>
+          <li>Hammerhead</li>
+          <li>Tiger</li>
+          <li>Great White</li>
+        </ul>
+      </body>
+
+     </html>
+
+		!-<li>Hammerhead</li>
+			This is the first child of the ul element and will therefore have its background changed to yellow as a result of the code in the question being run.
+https://www.digitalocean.com/community/tutorials/how-to-traverse-the-dom
+   	<li>Tiger</li>
+		  This is the second child of the ul element and will not be affected by the code in question being run.
+ 	  <li>Great White</li>
+		  This is the third child of the ul element and will not be affected by the code in question being run.
+	  <li>Megalodon</li>
+		  This is not a list item in the above code but is a giant shark that lived approximately 23 to 2.6 million years ago.
+      https://en.wikipedia.org/wiki/Megalodon
+
+
+Question for the learning objective "understand how To Make Changes to The Document Object Model (DOM)"
+
+What would the following code do when entered into the console on a browser?
+	const paragraph = document.createElement(‘p’);
+  
+		The console would return the error “Uncaught SyntaxError: Invalid or unexpected token”
+			This is done when the single ticks are formatted and copy pasted into the comand line. The error won’t occur when the single ticks are unformatted.
+      https://www.digitalocean.com/community/tutorials/how-to-make-changes-to-the-dom
+
+		!- A new, empty, p element would be greated in the DOM
+			This is the correct answer.  There is no line telling the console what to put in that element so it is created as an empty one.
+       https://www.digitalocean.com/community/tutorials/how-to-make-changes-to-the-dom
+
+		A new p element encompassing the word paragraph would be created
+			There is no line telling the console what to put inside of the element, therefore the element is created empty.
+      https://www.digitalocean.com/community/tutorials/how-to-make-changes-to-the-dom
+
+		Nothing
+			It will return as undifinied but the element will be created.
+      https://www.digitalocean.com/community/tutorials/how-to-make-changes-to-the-dom
+
+Question for the learning objective "understand how to modify attributes, classes, and styles in The Document Object Model (DOM)"
+
+What happens when an element with an inline style is styled through the console? 
+Ex.
+Html:
+  <div style= ”font-size: 70px; color: blue;”>Text</div> 
+Console:
+	Const div = document.querySelector(‘div’);
+	div.setAttribute(‘style’, ‘text-align: center’);
+
+	Nothing will happen to the page.
+		The div will take on only the new styling that was executed in the console.
+    https://www.digitalocean.com/community/tutorials/how-to-modify-attributes-classes-and-styles-in-the-dom
+	The style will concatenate, creating 3 styles for the div.
+		The manipulation through the console will delete all old inline styling and apply the new style.
+    https://www.digitalocean.com/community/tutorials/how-to-modify-attributes-classes-and-styles-in-the-dom
+	!- The style in the console will delete the existing inline files and only the newly set style will show.
+		This is the correct answer.  Manipulating the styling of elements in the console removes all existing inline styles and applies the new style.
+    https://www.digitalocean.com/community/tutorials/how-to-modify-attributes-classes-and-styles-in-the-dom
+	 The div will lose all styling.
+		The div will not lose all styling, only inline styling that was applied on initial load.
+    https://www.digitalocean.com/community/tutorials/how-to-modify-attributes-classes-and-styles-in-the-dom
+
+
+Question for the learning objective "understand the difference between the DOM and HTML Source Code"
+
+The console manipulates the __________ NOT the HTML.
+  dom/DOM/document object model
+  https://www.theodinproject.com/courses/web-development-101/lessons/dom-manipulation
